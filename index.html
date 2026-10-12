@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Finance & Valuation Master Guidebook — Aswath Damodaran</title>
+  <meta name="description" content="A step-by-step learning guidebook for mastering corporate finance, intrinsic valuation, and financial modeling based on Prof. Aswath Damodaran's NYU Stern curriculum.">
+  
+  <!-- Zero-FOUC Instant Theme Lock Script -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('damodaran_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
+  <!-- Preconnect & Preload Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Minimalist Vector Grid Canvas -->
+  <div class="vector-grid-bg"></div>
+
+  <!-- Mobile Top Header Bar (Visible on Mobile & Tablet) -->
+  <header class="mobile-header">
+    <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="hamburger-icon">☰</span>
+    </button>
+    <div class="mobile-brand">
+      <span class="pulse-dot"></span>
+      <span class="mobile-brand-title">NYU STERN GUIDEBOOK</span>
+    </div>
+    <button id="mobile-theme-toggle" class="mobile-theme-btn" aria-label="Toggle theme">
+      <span id="mobile-theme-icon">⚪</span>
+    </button>
+  </header>
+
+  <!-- Sidebar Overlay Backdrop for Mobile/Tablet -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <div class="app-layout">
+    <!-- Persistent Left Sidebar Navigation (Step-by-Step Guidebook) -->
+    <aside class="sidebar" id="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-header-top">
+          <div class="brand-badge"><span class="pulse-dot"></span> NYU STERN</div>
+          <button id="mobile-sidebar-close" class="mobile-sidebar-close-btn" aria-label="Close navigation sidebar">✕</button>
+        </div>
+        <h1 class="brand-title">CORPORATE FINANCE<br><span class="brand-sub">& VALUATION GUIDEBOOK</span></h1>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-section-title">GUIDEBOOK ROADMAP</div>
+        <button class="nav-item active" data-view="dashboard">
+          <span class="nav-icon">✦</span>
+          <span class="nav-text">Guidebook Overview</span>
+        </button>
+        
+        <div class="nav-section-title">LEARNING STEPS</div>
+        <button class="nav-item" data-view="step1-mindset">
+          <span class="nav-icon">01</span>
+          <span class="nav-text">Mindset & Framework</span>
+          <span class="nav-badge">Day 1</span>
+        </button>
+        <button class="nav-item" data-view="prereqs">
+          <span class="nav-icon">02</span>
+          <span class="nav-text">Prerequisite Primers</span>
+          <span class="nav-badge">Wk 1</span>
+        </button>
+        <button class="nav-item" data-view="step3-tracks">
+          <span class="nav-icon">03</span>
+          <span class="nav-text">Select Learning Track</span>
+          <span class="nav-badge">Formats</span>
+        </button>
+        <button class="nav-item" data-view="phase1">
+          <span class="nav-icon">04</span>
+          <span class="nav-text">Corporate Finance Core</span>
+          <span class="nav-badge">Wk 2-12</span>
+        </button>
+        <button class="nav-item" data-view="phase2">
+          <span class="nav-icon">05</span>
+          <span class="nav-text">Intrinsic Valuation</span>
+          <span class="nav-badge">Wk 13-20</span>
+        </button>
+        <button class="nav-item" data-view="specialized">
+          <span class="nav-icon">06</span>
+          <span class="nav-text">Specialized & Options</span>
+          <span class="nav-badge">Wk 21-22</span>
+        </button>
+        <button class="nav-item" data-view="step7-practice">
+          <span class="nav-icon">07</span>
+          <span class="nav-text">Applied Practice</span>
+          <span class="nav-badge">Analyst</span>
+        </button>
+
+        <div class="nav-section-title">REFERENCE LIBRARIES</div>
+        <button class="nav-item" data-view="teaching">
+          <span class="nav-icon">EDU</span>
+          <span class="nav-text">Teaching & Courses</span>
+        </button>
+        <button class="nav-item" data-view="books-papers">
+          <span class="nav-icon">PUB</span>
+          <span class="nav-text">Writing & Publications</span>
+        </button>
+        <button class="nav-item" data-view="tools">
+          <span class="nav-icon">TOOL</span>
+          <span class="nav-text">Valuation & Finance Tools</span>
+        </button>
+        <button class="nav-item" data-view="reference">
+          <span class="nav-icon">DATA</span>
+          <span class="nav-text">Datasets & Benchmarks</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sync-status-box">
+          <span class="sync-dot"></span>
+          <span id="sync-text">LIVE SYNC ACTIVE</span>
+        </div>
+        <button id="theme-toggle" class="theme-btn">
+          <span id="theme-icon">⚪</span> <span id="theme-text">LIGHT MODE</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-workspace">
+      <div class="main-stream">
+        
+        <!-- Persistent Header Bar -->
+        <header class="content-header">
+          <div class="search-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-input" placeholder="Search guidebook steps, Ginzu, WACC, MBA syllabus, problem sets..." autocomplete="off">
+            <button id="clear-search" class="clear-btn" style="display: none;">✕</button>
+          </div>
+
+          <div class="header-actions">
+            <button id="btn-force-sync" class="action-btn">
+              <span>🔄 CHECK UPDATES</span>
+            </button>
+            <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/topics.html" target="_blank" class="action-btn action-btn-primary">
+              <span>TOPICS & CLASS HUB ↗</span>
+            </a>
+          </div>
+        </header>
+
+        <!-- Dynamic Views Container -->
+        <div id="view-container">
+
+          <!-- VIEW 1: DASHBOARD / GUIDEBOOK ROADMAP -->
+          <div id="view-dashboard" class="app-view active">
+            <div class="minimal-hero">
+              <div class="hero-line"></div>
+              <div class="hero-top-meta">
+                <span class="meta-tag">STEP-BY-STEP LEARNING ROADMAP</span>
+                <span class="meta-separator">•</span>
+                <span class="meta-tag">FROM ZERO TO VALUATION ANALYST</span>
+              </div>
+              <h2 class="minimal-hero-title">
+                The Master Guidebook to <span class="typing-text" id="typewriter">Corporate Finance & Valuation</span>
+              </h2>
+              <p class="minimal-hero-desc">
+                Welcome to your structured, step-by-step guidebook. Designed specifically for anyone entering corporate finance and valuation, this portal transforms Prof. Aswath Damodaran's NYU Stern curriculum into a clear, easy-to-follow 7-step learning path.
+              </p>
+
+              <div class="counter-strip">
+                <div class="counter-box">
+                  <span class="counter-val">7</span>
+                  <span class="counter-lbl">GUIDEBOOK STEPS</span>
+                </div>
+                <div class="counter-divider"></div>
+                <div class="counter-box">
+                  <span class="counter-val">3</span>
+                  <span class="counter-lbl">LEARNING TRACKS</span>
+                </div>
+                <div class="counter-divider"></div>
+                <div class="counter-box">
+                  <span class="counter-val">61</span>
+                  <span class="counter-lbl">VIDEO SESSIONS</span>
+                </div>
+                <div class="counter-divider"></div>
+                <div class="counter-box">
+                  <span class="counter-val">100+</span>
+                  <span class="counter-lbl">EXCEL MODELS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- START HERE: QUICK ORIENTATION GUIDE -->
+            <div class="phase-card" style="margin-bottom: 32px;">
+              <div class="phase-header">
+                <div>
+                  <div class="phase-tag">START HERE • ORIENTATION GUIDE</div>
+                  <h2 class="phase-title">How to Follow This Guidebook (For Any Skill Level)</h2>
+                  <p class="phase-desc">Whether you are a complete beginner or a finance professional refreshing your skills, follow this recommended path.</p>
+                </div>
+              </div>
+
+              <div style="padding: 24px 28px;" class="checkpoints-grid">
+                <div class="cp-card">
+                  <span class="tool-badge" style="width: fit-content; margin-bottom: 8px;">LEVEL 1: COMPLETE BEGINNER</span>
+                  <strong>Start at Step 1 & Step 2</strong>
+                  <p>Begin with <strong>Mindset & Framework Setup</strong> (Step 1) and complete the 3 foundational primers in <strong>Accounting, Statistics, & TVM</strong> (Step 2) before taking on Corporate Finance.</p>
+                  <button class="pill-btn" data-switch-view="step1-mindset" style="width: fit-content;">START STEP 1 ➔</button>
+                </div>
+
+                <div class="cp-card">
+                  <span class="tool-badge" style="width: fit-content; margin-bottom: 8px;">LEVEL 2: STUDENT / PRACTITIONER</span>
+                  <strong>Jump to Step 3 & Step 4</strong>
+                  <p>Select your learning track (MBA Semester Class vs Executive 3-Day vs Webcasts) in <strong>Step 3</strong> and dive directly into <strong>Corporate Finance Core</strong> (Step 4).</p>
+                  <button class="pill-btn" data-switch-view="step3-tracks" style="width: fit-content;">GO TO STEP 3 ➔</button>
+                </div>
+
+                <div class="cp-card">
+                  <span class="tool-badge" style="width: fit-content; margin-bottom: 8px;">LEVEL 3: EXPERIENCED ANALYST</span>
+                  <strong>Fast-Track to Step 5, 6 & 7</strong>
+                  <p>Go straight to <strong>Intrinsic & Relative Valuation</strong> (Step 5), <strong>Specialized Firm & Real Options Models</strong> (Step 6), and <strong>Live Real-Time Valuations & Datasets</strong> (Step 7).</p>
+                  <button class="pill-btn" data-switch-view="phase2" style="width: fit-content;">GO TO STEP 5 ➔</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP-BY-STEP GUIDEBOOK ROADMAP -->
+            <div class="phase-card" style="margin-bottom: 32px;">
+              <div class="phase-header">
+                <div>
+                  <div class="phase-tag">YOUR 7-STEP LEARNING JOURNEY</div>
+                  <h2 class="phase-title">Follow the Step-by-Step Roadmap</h2>
+                  <p class="phase-desc">Click any step below to begin your structured training path.</p>
+                </div>
+              </div>
+
+              <div style="padding: 24px 28px;" class="timeline-container">
+                
+                <!-- Step 1 Card -->
+                <div class="step-roadmap-item" data-switch-view="step1-mindset">
+                  <div class="step-num-badge">01</div>
+                  <div class="step-content">
+                    <div class="step-meta">STEP 1 • ESTIMATED PACING: 1 DAY</div>
+                    <h3 class="step-title">Mindset & Core Framework Setup</h3>
+                    <p class="step-desc">Understand the objective function of a business, Damodaran's classroom philosophy, and the three pillars of finance.</p>
+                    <span class="portal-link">START STEP 1 ➔</span>
+                  </div>
+                </div>
+
+                <!-- Step 2 Card -->
+                <div class="step-roadmap-item" data-switch-view="prereqs">
+                  <div class="step-num-badge">02</div>
+                  <div class="step-content">
+                    <div class="step-meta">STEP 2 • ESTIMATED PACING: 1–2 WEEKS</div>
+                    <h3 class="step-title">Prerequisite Foundations (Accounting, Stats & TVM)</h3>
+                    <p class="step-desc">Master reading 10-K financial statements, financial statistics (beta & regression), and Time Value of Money (TVM).</p>
+                    <span class="portal-link">START STEP 2 ➔</span>
+                  </div>
+                </div>
+
+                <!-- Step 3 Card -->
+                <div class="step-roadmap-item" data-switch-view="step3-tracks">
+                  <div class="step-num-badge">03</div>
+                  <div class="step-content">
+                    <div class="step-meta">STEP 3 • ESTIMATED PACING: DECISION STAGE</div>
+                    <h3 class="step-title">Select Your Preferred Learning Format</h3>
+                    <p class="step-desc">Choose between Full Semester Stern MBA Class Track, Executive 3-Day Program, or 61 Self-Paced Video Webcasts.</p>
+                    <span class="portal-link">CHOOSE TRACK ➔</span>
+                  </div>
+                </div>
+
+                <!-- Step 4 Card -->
+                <div class="step-roadmap-item" data-switch-view="phase1">
+                  <div class="step-num-badge">04</div>
+                  <div class="step-content">
+                    <div class="step-meta">STEP 4 • ESTIMATED PACING: 8–10 WEEKS</div>
+                    <h3 class="step-title">Corporate Finance Core (36 Sessions)</h3>
+                    <p class="step-desc">Master Hurdle Rates, Risk & Betas, Cost of Capital (WACC), Investment Returns (NPV/IRR), Capital Structure, and Dividend Policy.</p>
+                    <span class="portal-link">START STEP 4 ➔</span>
+                  </div>
+                </div>
+
+                <!-- Step 5 Card -->
+                <div class="step-roadmap-item" data-switch-view="phase2">
+                  <div class="step-num-badge">05</div>
+                  <div class="step-content">
+                    <div class="step-meta">STEP 5 • ESTIMATED PACING: 6–8 WEEKS</div>
+                    <h3 class="step-title">Intrinsic & Relative Valuation (25 Sessions)</h3>
+                    <p class="step-desc">Build Discounted Cash Flow (DCF) models, FCFF/FCFE, terminal value, PE/EV multiples, and master Ginzu spreadsheets.</p>
+                    <span class="portal-link">START STEP 5 ➔</span>
+                  </div>
+                </div>
+
+                <!-- Step 6 Card -->
+                <div class="step-roadmap-item" data-switch-view="specialized">
+                  <div class="step-num-badge">06</div>
+                  <div class="step-content">
+                    <div class="step-meta">STEP 6 • ESTIMATED PACING: 2–3 WEEKS</div>
+                    <h3 class="step-title">Specialized Firm Valuation & Real Options</h3>
+                    <p class="step-desc">Value non-standard firms: Financial Services/Banks, Distressed Firms, Private Companies, Patents, Oil Reserves, and LBOs.</p>
+                    <span class="portal-link">START STEP 6 ➔</span>
+                  </div>
+                </div>
+
+                <!-- Step 7 Card -->
+                <div class="step-roadmap-item" data-switch-view="step7-practice">
+                  <div class="step-num-badge">07</div>
+                  <div class="step-content">
+                    <div class="step-meta">STEP 7 • ESTIMATED PACING: ONGOING ANALYST PRACTICE</div>
+                    <h3 class="step-title">Applied Practice, Live Valuations & Datasets</h3>
+                    <p class="step-desc">Practice on live real-time company valuations, weekly corporate finance puzzles, student project briefs, and Jan 2026 Stern datasets.</p>
+                    <span class="portal-link">START STEP 7 ➔</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="live-updates-container" style="display: none; margin-top: 32px;"></div>
+          </div>
+
+          <!-- STEP 1 VIEW: MINDSET & SETUP -->
+          <div id="view-step1-mindset" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">STEP 01 OF 07 • FOUNDATIONS</span>
+              <h1 class="page-main-title">Mindset & Core Framework Setup</h1>
+              <p class="page-sub-title">Before diving into financial math, calibrate your mindset. Understand Prof. Damodaran's first principles and how all finance decisions fit together.</p>
+            </div>
+
+            <div class="timeline-container">
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">CORE LESSONS</div>
+                    <h2 class="phase-title">Key Conceptual Foundations</h2>
+                    <p class="phase-desc">Explore Damodaran's objective function of a business and his teaching philosophy.</p>
+                  </div>
+                </div>
+                <div style="padding: 24px 28px;" class="checkpoints-grid">
+                  <div class="cp-card">
+                    <strong>1. Teaching Philosophy</strong>
+                    <p>Why Prof. Damodaran teaches and why valuation is story + numbers.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/teachingphil.html" target="_blank" class="pill-btn" style="width: fit-content;">READ PHILOSOPHY ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>2. Three Pillars of Finance</strong>
+                    <p>How Corporate Finance, Valuation, and Portfolio Management interlock.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/topics.html" target="_blank" class="pill-btn" style="width: fit-content;">READ OVERVIEW ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>3. Open House Overview Video</strong>
+                    <p>Watch Damodaran explain the scope of his courses and how to sequence them.</p>
+                    <a href="https://www.youtube.com/embed/1gLQS2v6rqE" target="_blank" class="pill-btn" style="width: fit-content;">WATCH OVERVIEW ↗</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Next Step Banner -->
+              <div class="next-step-bar">
+                <div>
+                  <span class="phase-tag">PROGRESS</span>
+                  <h4>Completed Step 1? Move to Prerequisites!</h4>
+                </div>
+                <button class="action-btn action-btn-primary" data-switch-view="prereqs">CONTINUE TO STEP 2 ➔</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2 VIEW: PREREQUISITE PRIMERS -->
+          <div id="view-prereqs" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">STEP 02 OF 07 • PRIMERS</span>
+              <h1 class="page-main-title">Prerequisite Prep Courses</h1>
+              <p class="page-sub-title">If you are new to finance, complete these 3 short prep courses to build your accounting, statistics, and TVM baseline.</p>
+            </div>
+
+            <div class="timeline-container">
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">PRIMER 01</div>
+                    <h2 class="phase-title">1. Minimalist Accounting for Finance</h2>
+                    <p class="phase-desc">Designed to take minimal accounting concepts and teach how best to read 10-K and 10-Q financial statements for valuation inputs.</p>
+                  </div>
+                  <div style="display:flex; gap:8px;">
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm" target="_blank" class="pill-btn">COURSE HUB ↗</a>
+                    <a href="https://www.youtube.com/playlist?list=PLUkh9m2BorqmKaLrNBjKtFDhpdFdi8f7C" target="_blank" class="pill-btn">[WATCH YOUTUBE]</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">PRIMER 02</div>
+                    <h2 class="phase-title">2. Applied Statistics for Finance & Investing</h2>
+                    <p class="phase-desc">Converts raw market data into information using distributions, standard deviations, correlations, and regression analysis.</p>
+                  </div>
+                  <div style="display:flex; gap:8px;">
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcaststatistics.htm" target="_blank" class="pill-btn">COURSE HUB ↗</a>
+                    <a href="https://www.youtube.com/playlist?list=PLUkh9m2BorqmXcRzWFbzcjMd7fYErVexF" target="_blank" class="pill-btn">[WATCH YOUTUBE]</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">PRIMER 03</div>
+                    <h2 class="phase-title">3. Foundations of Finance (9-Session Short Course)</h2>
+                    <p class="phase-desc">Covering foundational finance concepts: business structure, measuring cash flows & risk, TVM discounting, and stock & bond valuation.</p>
+                  </div>
+                  <div style="display:flex; gap:8px;">
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastfoundationsonline.htm" target="_blank" class="pill-btn">COURSE HUB ↗</a>
+                    <a href="https://www.youtube.com/playlist?list=PLUkh9m2BorqndWimijiJ-VCAXjJUrzJQU" target="_blank" class="pill-btn">[WATCH YOUTUBE]</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="next-step-bar">
+                <div>
+                  <span class="phase-tag">PROGRESS</span>
+                  <h4>Completed Prerequisites? Select your Learning Track!</h4>
+                </div>
+                <button class="action-btn action-btn-primary" data-switch-view="step3-tracks">CONTINUE TO STEP 3 ➔</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3 VIEW: SELECT TRACK -->
+          <div id="view-step3-tracks" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">STEP 03 OF 07 • FORMAT SELECTION</span>
+              <h1 class="page-main-title">Select Your Learning Format Track</h1>
+              <p class="page-sub-title">Choose the track that fits your schedule: Full Semester NYU Stern MBA, Compressed Executive Program, or Self-Paced Video Webcasts.</p>
+            </div>
+
+            <div class="portal-cards-grid">
+              <div class="portal-card" data-switch-view="mba-track">
+                <div class="portal-tag">TRACK A • NYU STERN FULL SEMESTER</div>
+                <h3>Full MBA Class Track</h3>
+                <p>Complete semester MBA structure with Syllabi, Lecture Notes, Semester Projects, Past Quizzes & Exams with solutions.</p>
+                <span class="portal-link">SELECT MBA TRACK ➔</span>
+              </div>
+
+              <div class="portal-card" data-switch-view="exec-track">
+                <div class="portal-tag">TRACK B • COMPRESSED INTENSIVE</div>
+                <h3>Executive Program Track</h3>
+                <p>3-day/6-day intensive structure: Textbook chapter assignments (ACF Ch 1-12), problem set PDFs, and executive project updates.</p>
+                <span class="portal-link">SELECT EXEC TRACK ➔</span>
+              </div>
+
+              <div class="portal-card" data-switch-view="phase1">
+                <div class="portal-tag">TRACK C • SELF-PACED ONLINE</div>
+                <h3>Online Webcast Track (61 Videos)</h3>
+                <p>36 Corporate Finance & 25 Valuation YouTube video webcasts with slide decks and post-session self-tests.</p>
+                <span class="portal-link">START WEBCAST TRACK ➔</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3 SUB-VIEW: FULL MBA TRACK -->
+          <div id="view-mba-track" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">NYU STERN MBA CLASS TRACK</span>
+              <h1 class="page-main-title">Full Semester MBA Courses</h1>
+              <p class="page-sub-title">Complete semester-long NYU Stern MBA course materials for Corporate Finance, Valuation, and Portfolio Management.</p>
+            </div>
+
+            <div class="timeline-container">
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">MBA COURSE 01</div>
+                    <h2 class="phase-title">MBA Corporate Finance (26 Semester Sessions)</h2>
+                    <p class="phase-desc">Semester-long big-picture MBA class covering investment rules, optimal capital structure, and dividend policy.</p>
+                  </div>
+                  <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/corpfin.html" target="_blank" class="pill-btn">OFFICIAL MBA PAGE ↗</a>
+                </div>
+                <div style="padding: 24px 28px;" class="checkpoints-grid">
+                  <div class="cp-card">
+                    <strong>Official Class Syllabus (PDF)</strong>
+                    <p>Spring 2025 semester course schedule and grading breakdown.</p>
+                    <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/cfovhds/cfsyllspr25.pdf" target="_blank" class="pill-btn" style="width:fit-content;">DOWNLOAD SYLLABUS ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Full Lecture Notes Packets</strong>
+                    <p>Complete PDF slide packets used in Stern MBA lectures.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/cflect.htm" target="_blank" class="pill-btn" style="width:fit-content;">VIEW LECTURE NOTES ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Semester Corporate Finance Project</strong>
+                    <p>Full company financial analysis brief, instructions & past student examples.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/cfproj.html" target="_blank" class="pill-btn" style="width:fit-content;">OPEN PROJECT HUB ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Practice Problems & Solutions</strong>
+                    <p>Problem sets with full downloadable PDF solution guides.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/cfprset.htm" target="_blank" class="pill-btn" style="width:fit-content;">SOLVE PROBLEMS ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Past Exams & Quizzes with Solutions</strong>
+                    <p>Real past MBA Quizzes 1-3 and Final Exams with answer keys.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/cfprob0.html" target="_blank" class="pill-btn" style="width:fit-content;">OPEN PAST EXAMS ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Corporate Finance Case Study</strong>
+                    <p>Comprehensive real-world case study for class analysis.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/cfcase.html" target="_blank" class="pill-btn" style="width:fit-content;">OPEN CASE STUDY ↗</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">MBA COURSE 02</div>
+                    <h2 class="phase-title">MBA Valuation (26 Semester Sessions)</h2>
+                    <p class="phase-desc">Full semester MBA Valuation course: DCF, APV, relative valuation multiples, real options, and private firm valuation.</p>
+                  </div>
+                  <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/equity.html" target="_blank" class="pill-btn">OFFICIAL MBA PAGE ↗</a>
+                </div>
+                <div style="padding: 24px 28px;" class="checkpoints-grid">
+                  <div class="cp-card">
+                    <strong>Official Class Syllabus (PDF)</strong>
+                    <p>Spring 2025 semester valuation schedule and guidelines.</p>
+                    <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqsyllspr25.pdf" target="_blank" class="pill-btn" style="width:fit-content;">DOWNLOAD SYLLABUS ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Full Lecture Notes Packets</strong>
+                    <p>Valuation lecture slide packets (Parts I, II, III).</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/eqlect.htm" target="_blank" class="pill-btn" style="width:fit-content;">VIEW LECTURE NOTES ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Full Valuation Project Brief (PDF)</strong>
+                    <p>Instructions for performing full company valuation analysis.</p>
+                    <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqprojspr25.pdf" target="_blank" class="pill-btn" style="width:fit-content;">DOWNLOAD PROJECT BRIEF ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Valuation Practice Problems</strong>
+                    <p>Practice problem sets with detailed solution step-by-steps.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/eqprset.htm" target="_blank" class="pill-btn" style="width:fit-content;">SOLVE PROBLEMS ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Past Valuation Exams & Quizzes</strong>
+                    <p>Past MBA Valuation Quizzes 1-3 & Final Exams with solutions.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/eqexam.htm" target="_blank" class="pill-btn" style="width:fit-content;">OPEN PAST EXAMS ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Quiz Review Webcasts</strong>
+                    <p>Webcast reviews of past quiz questions and solution strategies.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/eqquizreview.htm" target="_blank" class="pill-btn" style="width:fit-content;">WATCH REVIEWS ↗</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="next-step-bar">
+                <div>
+                  <span class="phase-tag">PROGRESS</span>
+                  <h4>Ready for Corporate Finance Sessions?</h4>
+                </div>
+                <button class="action-btn action-btn-primary" data-switch-view="phase1">CONTINUE TO STEP 4 ➔</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3 SUB-VIEW: EXECUTIVE TRACK -->
+          <div id="view-exec-track" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">EXECUTIVE EDUCATION TRACK</span>
+              <h1 class="page-main-title">Compressed Executive Programs</h1>
+              <p class="page-sub-title">3-Day / 6-Day intensive executive format: Pre-reading tools, textbook chapter breakdowns, problem sets with PDF solutions, and executive project updates.</p>
+            </div>
+
+            <div class="timeline-container">
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">EXECUTIVE STRUCTURE</div>
+                    <h2 class="phase-title">Executive Corporate Finance (3-Day Breakdown)</h2>
+                    <p class="phase-desc">Session-by-session readings in <em>Applied Corporate Finance</em> (Ch 1-12), problem set PDFs, project updates, and quiz reviews.</p>
+                  </div>
+                  <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/triumdesc.html" target="_blank" class="pill-btn">EXEC HUB ↗</a>
+                </div>
+
+                <div class="session-stream">
+                  <div class="tool-highlight-row">
+                    <div>
+                      <span class="tool-badge">DAY 1 • SESSIONS 1, 2, 3</span>
+                      <span class="tool-name">Objectives, Risk & Hurdle Rates (Readings: Chapters 1, 2, 3, 4)</span>
+                    </div>
+                    <div class="tool-links">
+                      <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/mgtobj.pdf" target="_blank" class="pill-btn">Problem Set 1 (PDF)</a>
+                      <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/riskhurdle.pdf" target="_blank" class="pill-btn">Problem Set 2 (PDF)</a>
+                    </div>
+                  </div>
+
+                  <div class="tool-highlight-row">
+                    <div>
+                      <span class="tool-badge">DAY 2 • SESSION 4</span>
+                      <span class="tool-name">Measuring Investment Returns (Readings: Chapters 5, 6)</span>
+                    </div>
+                    <div class="tool-links">
+                      <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/measuringreturns.pdf" target="_blank" class="pill-btn">Problem Set 3 (PDF)</a>
+                      <a href="https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls" target="_blank" class="pill-btn">WACC Calculator (.xls)</a>
+                    </div>
+                  </div>
+
+                  <div class="tool-highlight-row">
+                    <div>
+                      <span class="tool-badge">DAY 2 • SESSIONS 4, 5</span>
+                      <span class="tool-name">Optimal Capital Structure (Readings: Chapters 7, 8, 9)</span>
+                    </div>
+                    <div class="tool-links">
+                      <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/capstruchoices.pdf" target="_blank" class="pill-btn">Choices Set (PDF)</a>
+                      <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/optmix.pdf" target="_blank" class="pill-btn">Optimal Mix Set (PDF)</a>
+                      <a href="https://pages.stern.nyu.edu/~adamodar/pc/capstru.xls" target="_blank" class="pill-btn">capstru.xls</a>
+                    </div>
+                  </div>
+
+                  <div class="tool-highlight-row">
+                    <div>
+                      <span class="tool-badge">DAY 3 • SESSION 6</span>
+                      <span class="tool-name">Dividend Policy & Valuation (Readings: Chapters 10, 11, 12)</span>
+                    </div>
+                    <div class="tool-links">
+                      <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/dividendpolicy.pdf" target="_blank" class="pill-btn">Dividend Set (PDF)</a>
+                      <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffsimpleginzu.xlsx" target="_blank" class="pill-btn">Simple Ginzu (.xlsx)</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="next-step-bar">
+                <div>
+                  <span class="phase-tag">PROGRESS</span>
+                  <h4>Ready for Corporate Finance Sessions?</h4>
+                </div>
+                <button class="action-btn action-btn-primary" data-switch-view="phase1">CONTINUE TO STEP 4 ➔</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4 VIEW: CORPORATE FINANCE CORE (36 SESSIONS) -->
+          <div id="view-phase1" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">STEP 04 OF 07 • CORPORATE FINANCE</span>
+              <h1 class="page-main-title">Corporate Finance Core (36 Sessions)</h1>
+              <p class="page-sub-title">The core spine for corporate financial decision making: Investment Rule (Hurdle Rate & Returns), Capital Structure (Optimal Debt Ratio), and Dividend Policy (Returning Cash to Owners).</p>
+            </div>
+            <div id="curriculum-phase1" class="timeline-container"></div>
+
+            <div class="next-step-bar" style="margin-top: 32px;">
+              <div>
+                <span class="phase-tag">PROGRESS</span>
+                <h4>Completed Corporate Finance Core? Move to Valuation!</h4>
+              </div>
+              <button class="action-btn action-btn-primary" data-switch-view="phase2">CONTINUE TO STEP 5 ➔</button>
+            </div>
+          </div>
+
+          <!-- STEP 5 VIEW: INTRINSIC VALUATION (25 SESSIONS) -->
+          <div id="view-phase2" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">STEP 05 OF 07 • VALUATION</span>
+              <h1 class="page-main-title">Intrinsic & Relative Valuation (25 Sessions)</h1>
+              <p class="page-sub-title">Discounted cash flow (DCF), cost of capital vs APV models, PE and EV relative multiples, patent & distressed equity real options, and private firm valuation.</p>
+            </div>
+            <div id="curriculum-phase2" class="timeline-container"></div>
+
+            <div class="next-step-bar" style="margin-top: 32px;">
+              <div>
+                <span class="phase-tag">PROGRESS</span>
+                <h4>Mastered Standard DCF? Explore Specialized Models!</h4>
+              </div>
+              <button class="action-btn action-btn-primary" data-switch-view="specialized">CONTINUE TO STEP 6 ➔</button>
+            </div>
+          </div>
+
+          <!-- STEP 6 VIEW: SPECIALIZED MODELS & REAL OPTIONS -->
+          <div id="view-specialized" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">STEP 06 OF 07 • SPECIALIZED VALUATION</span>
+              <h1 class="page-main-title">Specialized Firm Valuation & Real Options</h1>
+              <p class="page-sub-title">Valuation models tailored for exceptions: Financial Services/Banks, Troubled/Distressed Firms, Private Companies, High-Growth Tech, Patents, Oil Reserves, and LBOs.</p>
+            </div>
+
+            <div class="timeline-container">
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">SPECIALIZED SECTORS</div>
+                    <h2 class="phase-title">Sector & Firm Specific Models</h2>
+                    <p class="phase-desc">Excel spreadsheets specifically structured for non-standard cash flows and regulatory accounting.</p>
+                  </div>
+                </div>
+                <div style="padding: 24px 28px;" class="checkpoints-grid">
+                  <div class="cp-card">
+                    <strong>Financial Services / Bank Model</strong>
+                    <p>Excess return on equity model designed for banks and insurance firms.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/fin-svc.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD fin-svc.xls ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Distressed / Troubled Firm Model</strong>
+                    <p>Earnings normalizer and probability of insolvency/survival estimator.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/distress.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD distress.xls ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Private Company Valuation Model</strong>
+                    <p>Adjust discount rates for total beta and calculate illiquidity discounts.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/pvtfirm.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD pvtfirm.xls ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Young & High Growth Firm Model</strong>
+                    <p>Revenue growth forecasting and target margin trajectory estimator.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/highgrow.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD highgrow.xls ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Acquisition Synergy & LBO Model</strong>
+                    <p>Quantify corporate control premiums, operating synergy, and LBO returns.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/synergy.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD synergy.xls ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Real Estate Property Model</strong>
+                    <p>Income property cash flow valuation and cap rate calculator.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/realestate.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD realestate.xls ↗</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">REAL OPTIONS</div>
+                    <h2 class="phase-title">Real Option Valuation Models</h2>
+                    <p class="phase-desc">Black-Scholes and Binomial applications for valuing strategic flexibility, patents, and option to delay/expand.</p>
+                  </div>
+                </div>
+                <div style="padding: 24px 28px;" class="checkpoints-grid">
+                  <div class="cp-card">
+                    <strong>Patent Valuation Option Model</strong>
+                    <p>Value patents and biotech drug pipelines as call options.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/patent.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD patent.xls ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Natural Resource Reserves Model</strong>
+                    <p>Value oil, gold, and mining undeveloped reserves as real options.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/natres.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD natres.xls ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Distressed Equity Call Option Model</strong>
+                    <p>Value equity in deeply indebted firms as a call option on firm assets.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/eqopt.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD eqopt.xls ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Option to Delay / Expand / Abandon</strong>
+                    <p>Calculate the value of strategic delay, growth options, and exit options.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/pc/optdelay.xls" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD optdelay.xls ↗</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="next-step-bar">
+                <div>
+                  <span class="phase-tag">PROGRESS</span>
+                  <h4>Ready to Apply Your Skills as an Analyst?</h4>
+                </div>
+                <button class="action-btn action-btn-primary" data-switch-view="step7-practice">CONTINUE TO STEP 7 ➔</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 7 VIEW: APPLIED ANALYST PRACTICE -->
+          <div id="view-step7-practice" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">STEP 07 OF 07 • ANALYST PRACTICE</span>
+              <h1 class="page-main-title">Applied Practice & Analyst Tools</h1>
+              <p class="page-sub-title">Transition from student to professional valuation analyst: Practice on real-time valuations, weekly puzzles, MBA project briefs, and live datasets.</p>
+            </div>
+
+            <div class="timeline-container">
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">ANALYST PRACTICE</div>
+                    <h2 class="phase-title">Real-World Case Studies & Weekly Puzzles</h2>
+                    <p class="phase-desc">Put your knowledge to work with real company data.</p>
+                  </div>
+                </div>
+                <div style="padding: 24px 28px;" class="checkpoints-grid">
+                  <div class="cp-card">
+                    <strong>Live Real-Time Valuations Portfolio</strong>
+                    <p>Rebuild Damodaran's valuations yourself before checking his numbers.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/covals.htm" target="_blank" class="pill-btn" style="width: fit-content;">OPEN PORTFOLIO ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Weekly Valuation Challenges</strong>
+                    <p>Short recurring valuation problems to sharpen your skills.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/wkchallenge.html" target="_blank" class="pill-btn" style="width: fit-content;">OPEN CHALLENGES ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Weekly Corporate Finance Puzzles</strong>
+                    <p>Corporate finance puzzles for practical decision making.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/wkpuzzle.html" target="_blank" class="pill-btn" style="width: fit-content;">OPEN PUZZLES ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Full MBA Project Brief (PDF)</strong>
+                    <p>Damodaran's official project brief instructions for real valuation analysis.</p>
+                    <a href="https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqprojspr25.pdf" target="_blank" class="pill-btn" style="width: fit-content;">DOWNLOAD BRIEF PDF ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OTHER VIEWS: PHILOSOPHY & PORTFOLIO MANAGEMENT -->
+          <div id="view-philosophy" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">PHILOSOPHY & PORTFOLIO MANAGEMENT</span>
+              <h1 class="page-main-title">Investment Philosophy & Applied Practice</h1>
+              <p class="page-sub-title">Covers how different investing styles (Value, Growth, Momentum, Activist) use valuation tools, plus real-time valuations, weekly puzzles, and student project briefs.</p>
+            </div>
+
+            <div class="timeline-container">
+              <div class="phase-card">
+                <div class="phase-header">
+                  <div>
+                    <div class="phase-tag">MBA & ONLINE COURSE</div>
+                    <h2 class="phase-title">Investment Philosophy Course</h2>
+                    <p class="phase-desc">Analyzing different market philosophies and why value investing has struggled in recent decades.</p>
+                  </div>
+                </div>
+                <div style="padding: 24px 28px;" class="checkpoints-grid">
+                  <div class="cp-card">
+                    <strong>Investment Philosophies Course Hub</strong>
+                    <p>Short online course companion page with full syllabus.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastinvphil.htm" target="_blank" class="pill-btn" style="width: fit-content;">OPEN HUB ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Free Book Companion Page</strong>
+                    <p>Book webpage with slides, chapters, and spreadsheets.</p>
+                    <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/invphil3edbook.htm" target="_blank" class="pill-btn" style="width: fit-content;">OPEN BOOK HUB ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>YouTube Lecture Playlist</strong>
+                    <p>Complete video lecture series for Investment Philosophies.</p>
+                    <a href="https://www.youtube.com/playlist?list=PLUkh9m2BorqnZGADa8cTzeJblmrZY_SqP" target="_blank" class="pill-btn" style="width: fit-content;">WATCH PLAYLIST ↗</a>
+                  </div>
+                  <div class="cp-card">
+                    <strong>Value Investing SSRN Paper</strong>
+                    <p>Damodaran's academic analysis of value investing's decade of struggle.</p>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3779481" target="_blank" class="pill-btn" style="width: fit-content;">READ SSRN PAPER ↗</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIEW: TEACHING & ONLINE CLASSES -->
+          <div id="view-teaching" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">TEACHING & COURSES HUB</span>
+              <h1 class="page-main-title">Online Courses, MBA Classes & Seminars</h1>
+              <p class="page-sub-title">Complete video webcasts, slide decks, syllabi, and self-tests across Prof. Damodaran's semester courses, executive programs, and online classes.</p>
+            </div>
+
+            <div class="sub-tabs-bar" data-hub="teaching">
+              <button class="sub-tab-btn active" data-subtab="online-classes">🎓 Online Courses (7)</button>
+              <button class="sub-tab-btn" data-subtab="mba-classes">🏫 Regular MBA & Undergrad</button>
+              <button class="sub-tab-btn" data-subtab="exec-classes">💼 Executive & Seminars</button>
+            </div>
+
+            <div id="teaching-subtab-container" class="timeline-container">
+              <!-- Rendered dynamically by script.js -->
+            </div>
+          </div>
+
+          <!-- VIEW: WRITING, BOOKS & PUBLICATIONS -->
+          <div id="view-books-papers" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">WRITING & PUBLICATIONS</span>
+              <h1 class="page-main-title">Books, Research Papers, Blog & Glossary</h1>
+              <p class="page-sub-title">Explore Damodaran's 11 published books, SSRN academic papers, financial press articles, "Musings on Markets" blog posts, and financial glossary.</p>
+            </div>
+
+            <div class="sub-tabs-bar" data-hub="writing">
+              <button class="sub-tab-btn active" data-subtab="books">📚 Books Directory (11)</button>
+              <button class="sub-tab-btn" data-subtab="papers">📄 SSRN Academic Papers</button>
+              <button class="sub-tab-btn" data-subtab="blog">✍️ Blog ("Musings on Markets")</button>
+              <button class="sub-tab-btn" data-subtab="articles">📰 Financial Press Articles</button>
+              <button class="sub-tab-btn" data-subtab="glossary">📖 Financial Glossary</button>
+            </div>
+
+            <div id="writing-subtab-container" class="timeline-container">
+              <!-- Rendered dynamically by script.js -->
+            </div>
+          </div>
+
+          <!-- VIEW: VALUATION & FINANCE TOOLS -->
+          <div id="view-tools" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">VALUATION & FINANCE TOOLS</span>
+              <h1 class="page-main-title">Master Excel Spreadsheets & Calculators</h1>
+              <p class="page-sub-title">Direct download links to ~30 spreadsheet tools for corporate finance, intrinsic DCF valuation (Ginzu models), real options, debt optimization, and mobile apps.</p>
+            </div>
+
+            <div class="sub-tabs-bar" data-hub="tools">
+              <button class="sub-tab-btn active" data-subtab="corpfin-tools">🏢 Corporate Finance Models</button>
+              <button class="sub-tab-btn" data-subtab="valuation-tools">📊 Valuation & Ginzu Models</button>
+              <button class="sub-tab-btn" data-subtab="option-tools">⚡ Real Option Models</button>
+              <button class="sub-tab-btn" data-subtab="apps-tools">📱 Apps & External Calculators</button>
+            </div>
+
+            <div id="tools-subtab-container" class="timeline-container">
+              <!-- Rendered dynamically by script.js -->
+            </div>
+          </div>
+
+          <!-- VIEW: DATA & BENCHMARKS -->
+          <div id="view-reference" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">DATA & BENCHMARKS</span>
+              <h1 class="page-main-title">Live Industry Datasets & Historical Data</h1>
+              <p class="page-sub-title">Explore Damodaran's annual industry datasets, Equity Risk Premiums (ERP), country risk spreads, historical market returns (1928–Present), and archived data.</p>
+            </div>
+
+            <div class="sub-tabs-bar" data-hub="data">
+              <button class="sub-tab-btn active" data-subtab="about-data">ℹ️ About Data</button>
+              <button class="sub-tab-btn" data-subtab="data-breakdown">📐 Data Breakdown</button>
+              <button class="sub-tab-btn" data-subtab="current-data">📈 Current Data (Jan 2026)</button>
+              <button class="sub-tab-btn" data-subtab="archived-data">🗄️ Archived Data (1999–2025)</button>
+              <button class="sub-tab-btn" data-subtab="webcasts-data">🎥 Webcasts / Tools</button>
+            </div>
+
+            <!-- Secondary Sub-Filter Bar -->
+            <div id="data-subfilters-wrapper" style="margin-bottom: 16px;"></div>
+
+            <div id="data-subtab-container" class="timeline-container">
+              <!-- Rendered dynamically by script.js -->
+            </div>
+          </div>
+
+        </div><!-- /#view-container -->
+      </div><!-- /.main-stream -->
+
+      <!-- Persistent Right Panel Widgets -->
+      <aside class="right-widgets-panel">
+        <div class="widget-box">
+          <div class="widget-header">
+            <span class="widget-tag">CURRICULUM OVERVIEW</span>
+            <h4>Guidebook Scope</h4>
+          </div>
+          <div class="summary-stats-grid">
+            <div class="summary-stat">
+              <span class="stat-val">7</span>
+              <span class="stat-lbl">STEPS ROADMAP</span>
+            </div>
+            <div class="summary-stat">
+              <span class="stat-val">61</span>
+              <span class="stat-lbl">VIDEO SESSIONS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget-box">
+          <div class="widget-header">
+            <span class="widget-tag">GUIDEBOOK PACING</span>
+            <h4>Suggested Roadmap</h4>
+          </div>
+          <ul class="pacing-list">
+            <li><span class="pacing-week">STEP 1–2 (WEEKS 1–2)</span><span>Mindset & Prerequisites</span></li>
+            <li><span class="pacing-week">STEP 4 (WEEKS 3–12)</span><span>Corporate Finance Core</span></li>
+            <li><span class="pacing-week">STEP 5 (WEEKS 13–20)</span><span>Intrinsic Valuation Core</span></li>
+            <li><span class="pacing-week">STEP 6–7 (WEEKS 21+)</span><span>Specialized & Analyst Practice</span></li>
+          </ul>
+        </div>
+
+        <div class="widget-box">
+          <div class="widget-header">
+            <span class="widget-tag">QUICK SHORTCUTS</span>
+            <h4>Essential Downloads</h4>
+          </div>
+          <div class="widget-links-list">
+            <a href="https://pages.stern.nyu.edu/~adamodar/pc/fcffsimpleginzu.xlsx" target="_blank" class="widget-link">
+              <span>Simple Ginzu Model</span>
+              <span class="ext-tag">.xlsx ↗</span>
+            </a>
+            <a href="https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls" target="_blank" class="widget-link">
+              <span>WACC Calculator</span>
+              <span class="ext-tag">.xls ↗</span>
+            </a>
+            <a href="https://pages.stern.nyu.edu/~adamodar/pc/eqmult.xls" target="_blank" class="widget-link">
+              <span>Equity Multiples</span>
+              <span class="ext-tag">.xls ↗</span>
+            </a>
+            <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html" target="_blank" class="widget-link">
+              <span>Jan 2026 Datasets</span>
+              <span class="ext-tag">Portal ↗</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
