@@ -1,0 +1,439 @@
+{
+  "sync_metadata": {
+    "last_synced": "2026-10-12T07:43:18.914Z",
+    "last_synced_human": "Mon, 12 Oct 2026 07:43:18 GMT",
+    "engine_version": "2.0.0 (Node.js)",
+    "status": "operational",
+    "monitored_endpoints": 6,
+    "total_blog_posts": 15,
+    "total_additional_items": 246
+  },
+  "recent_blog_posts": [
+    {
+      "title": "Stock Prices, Earnings and Cashflows: The AI Effect plays through!",
+      "date": "2026-10-08",
+      "url": "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+      "summary": "In a post at the end of August 2026, I talked about interest rates in 2026 and marveled at the capacity of equities to keep rising in the face of rising rates. I argued that the re..."
+    },
+    {
+      "title": "Interest Rates and Stock Prices: An Old Debate Flares up!",
+      "date": "2026-09-10",
+      "url": "https://aswathdamodaran.blogspot.com/2026/09/interest-rates-and-stock-prices-old.html",
+      "summary": "&nbsp; &nbsp; The war in Iran, oil prices and worries about a recession have all taken turns driving stock prices&nbsp; in 2026 but talk about interest rates and where they are goi..."
+    },
+    {
+      "title": "The Scaling and Profitability Trade off: Venture Capital's Weakest Link!",
+      "date": "2026-09-02",
+      "url": "https://aswathdamodaran.blogspot.com/2026/09/the-scaling-and-profitability-trade-off.html",
+      "summary": "&nbsp; &nbsp; It is undeniable technology companies have found their most hospitable setting in the United States and while there are many reasons for the US dominance of technolog..."
+    },
+    {
+      "title": "AI's Bar Mitzvah Moment: From Hype & Hope to Business Questions!",
+      "date": "2026-08-20",
+      "url": "https://aswathdamodaran.blogspot.com/2026/08/ais-bar-mitzvah-moment-from-hype-hope.html",
+      "summary": "Foreword: I wrote and posted this piece on August 20, 2026, with the promise that I would listen to feedback and try to respond and incorporate ideas and suggestions. To keep this ..."
+    },
+    {
+      "title": "The Situational Awareness Blow-up: The Collateral Damage from Investing Conviction!",
+      "date": "2026-08-10",
+      "url": "https://aswathdamodaran.blogspot.com/2026/08/the-situational-awareness-blow-up.html",
+      "summary": "&nbsp; &nbsp; &nbsp; Earlier this year, I was asked what I thought about Leopold Aschenbrenner and I admitted that I knew little about him other than what I had read about him, mor..."
+    },
+    {
+      "title": "Information Timing and Release: The Gaming of Guidance!",
+      "date": "2026-07-29",
+      "url": "https://aswathdamodaran.blogspot.com/2026/07/information-timing-and-release-gaming.html",
+      "summary": "&nbsp;&nbsp; &nbsp; I am a lapsed academic, insofar as I have not submitted a paper for publication in more than two decades, but to acquire academic status, I did have to earn a P..."
+    },
+    {
+      "title": "Country Risk: Drivers, Measures and Investment Implications - The 2026 Edition!",
+      "date": "2026-07-15",
+      "url": "https://aswathdamodaran.blogspot.com/2026/07/country-risk-drivers-measures-and.html",
+      "summary": "&nbsp;&nbsp; &nbsp; I am a creature of habit in my personal and professional life, and in the context of the content that I post online, there is a ritual that I follow with my dat..."
+    },
+    {
+      "title": "SpaceX, OpenAI and Anthropic: The S&P 500 Inclusion Question and Investment Consequences!",
+      "date": "2026-06-18",
+      "url": "https://aswathdamodaran.blogspot.com/2026/06/indexology-index-mechanics-and.html",
+      "summary": "&nbsp; &nbsp; &nbsp; Over the last few weeks, attention has (rightly) been focused on three potentially trillion dollar companies all lined up to go public, and much of the discuss..."
+    },
+    {
+      "title": "Revisiting the SpaceX Valuation: A Post-Prospectus Update!",
+      "date": "2026-06-04",
+      "url": "https://aswathdamodaran.blogspot.com/2026/06/a-weeks-ago-i-assessed-value-of-spacex.html",
+      "summary": "&nbsp; &nbsp; &nbsp; A &nbsp;few weeks ago, I assessed the value of SpaceX ahead of its initial public offering , with the admission that I was making my estimates with drabs of da..."
+    },
+    {
+      "title": "An Ode to Restraint: Lessons from the Tim Cook Legacy",
+      "date": "2026-05-06",
+      "url": "https://aswathdamodaran.blogspot.com/2026/05/an-ode-to-restraint-lessons-from-tim.html",
+      "summary": "&nbsp; &nbsp; &nbsp;Through time, we have glorified conquerors and empire builders in politics, civic life and business, from Alexander the Great and Genghis Khan to the tech titan..."
+    },
+    {
+      "title": "To a Trillion(s) Dollars and beyond: A SpaceX IPO Odyssey!",
+      "date": "2026-04-23",
+      "url": "https://aswathdamodaran.blogspot.com/2026/04/to-trillion-dollars-and-beyond-spacex.html",
+      "summary": "&nbsp; &nbsp; In 2001, A Space Odyssey , a movie that was well ahead of its time when it was released in 1968, Hal (the computer) famously responded to questions about his reliabil..."
+    },
+    {
+      "title": "Oil, War and the Global Economy: The Market's Narrative in March 2026",
+      "date": "2026-04-01",
+      "url": "https://aswathdamodaran.blogspot.com/2026/04/oil-war-and-global-economy-markets.html",
+      "summary": "&nbsp; &nbsp; Markets play an expectations game, and in March 2026, we saw the process play out, with all of its upsides and downsides. The month started with a war in the Middle E..."
+    },
+    {
+      "title": "Finding your investing lodestar: In Search of an Investment Philosophy",
+      "date": "2026-03-24",
+      "url": "https://aswathdamodaran.blogspot.com/2026/03/finding-your-investing-lodestar-in.html",
+      "summary": "&nbsp; &nbsp; When uncertainty roils markets, as is the case right now, it is natural for investors to get knocked off balance, a when off-balance, to make investment decisions tha..."
+    },
+    {
+      "title": "The Price of Risk: An Equity Risk Premium Monologue!",
+      "date": "2026-03-15",
+      "url": "https://aswathdamodaran.blogspot.com/2026/03/the-price-of-risk-equity-risk-premium.html",
+      "summary": "&nbsp; &nbsp;I start my valuation classes with a question of whether valuation is an art or a science, and I argue that it is neither; it does not have the precision that character..."
+    },
+    {
+      "title": "AI Scenarios: From Doomsday Destruction to Do-Nothing Bots!",
+      "date": "2026-03-04",
+      "url": "https://aswathdamodaran.blogspot.com/2026/03/ai-scenarios-from-economic-doomsday-to.html",
+      "summary": "&nbsp; &nbsp; &nbsp; When Chat GPT made its debut on November 30, 2022, it unleashed the hype of AI, and in the three years since, AI has taken on an outsized role not just in mark..."
+    }
+  ],
+  "additional_materials": [
+    {
+      "title": "US",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/inshold.xls",
+      "filename": "inshold.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Europe",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/insholdEurope.xls",
+      "filename": "insholdeurope.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Japan",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/insholdJapan.xls",
+      "filename": "insholdjapan.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Aus, NZ &amp; Canada",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/insholdRest.xls",
+      "filename": "insholdrest.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "All Emerging Mkts",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/insholdemerg.xls",
+      "filename": "insholdemerg.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Only China",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/insholdChina.xls",
+      "filename": "insholdchina.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Only India",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/insholdIndia.xls",
+      "filename": "insholdindia.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Global",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/insholdGlobal.xls",
+      "filename": "insholdglobal.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "April 1, 2026 update",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremApr26.xlsx",
+      "filename": "ctrypremapr26.xlsx",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "January 1, 2026 update",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctryprem.xlsx",
+      "filename": "ctryprem.xlsx",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "July 1, 2025 update",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly25.xlsx",
+      "filename": "ctrypremjuly25.xlsx",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "ctrypremjune13.xls",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJune13.xls",
+      "filename": "ctrypremjune13.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "U.S.",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+      "filename": "betas.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Europe",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaEurope.xls",
+      "filename": "betaeurope.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Japan",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaJapan.xls",
+      "filename": "betajapan.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Aus, NZ &amp; Canada",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaRest.xls",
+      "filename": "betarest.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "All Emerging Mkts",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaemerg.xls",
+      "filename": "betaemerg.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Just China",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaChina.xls",
+      "filename": "betachina.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Just India",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaIndia.xls",
+      "filename": "betaindia.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Global",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaGlobal.xls",
+      "filename": "betaglobal.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Video Guide",
+      "url": "https://youtu.be/rxmttgceSjg",
+      "filename": "rxmttgcesjg",
+      "type": "YouTube Lecture",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Download",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/countrytaxrates.xls",
+      "filename": "countrytaxrates.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "US",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/totalbeta.xls",
+      "filename": "totalbeta.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Europe",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/totalbetaEurope.xls",
+      "filename": "totalbetaeurope.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Japan",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/totalbetaJapan.xls",
+      "filename": "totalbetajapan.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Aus, NZ &amp; Canada",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/totalbetaRest.xls",
+      "filename": "totalbetarest.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "All Emerging Mkts",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/totalbetaemerg.xls",
+      "filename": "totalbetaemerg.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Just China",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/totalbetaChina.xls",
+      "filename": "totalbetachina.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Just India",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/totalbetaIndia.xls",
+      "filename": "totalbetaindia.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Global",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/totalbetaGlobal.xls",
+      "filename": "totalbetaglobal.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Download (US)",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/mktcaprisk.xlsx",
+      "filename": "mktcaprisk.xlsx",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "US",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+      "filename": "wacc.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Europe",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/waccEurope.xls",
+      "filename": "wacceurope.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Japan",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/waccJapan.xls",
+      "filename": "waccjapan.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Aus, NZ &amp; Canada",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/waccRest.xls",
+      "filename": "waccrest.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "All Emerging Mkts",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/waccemerg.xls",
+      "filename": "waccemerg.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Just China",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/waccChina.xls",
+      "filename": "waccchina.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Just India",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/waccIndia.xls",
+      "filename": "waccindia.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Global",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/waccGlobal.xls",
+      "filename": "waccglobal.xls",
+      "type": "Excel Model",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    },
+    {
+      "title": "Video Guide",
+      "url": "https://youtu.be/ypvQuufNUrY",
+      "filename": "ypvquufnury",
+      "type": "YouTube Lecture",
+      "source": "Current Datasets (2026)",
+      "category": "Datasets"
+    }
+  ],
+  "annual_dataset_logs": [
+    {
+      "year": "2026",
+      "status": "Current Live Datasets",
+      "update_date": "January 9, 2026",
+      "notes": "Full annual global dataset refresh across 90+ sectors (US, Europe, Emerging Markets, Japan, Global)."
+    },
+    {
+      "year": "2027",
+      "status": "Scheduled Next Major Release",
+      "update_date": "Early January 2027",
+      "notes": "Annual update tracking interest rate shifts, updated ERPs, and sovereign debt spreads."
+    }
+  ]
+}

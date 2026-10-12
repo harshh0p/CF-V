@@ -283,6 +283,8 @@ function switchView(targetViewId) {
     renderToolsSubtab('corpfin-tools');
   } else if (targetViewId === 'reference') {
     renderDataSubtab('about-data');
+  } else if (targetViewId === 'updates') {
+    renderUpdatesSubtab('live-blog');
   }
 
   // Update URL hash smoothly without reloading
@@ -617,6 +619,177 @@ function renderDataSubtab(subtabKey, subfilterKey = null) {
   `;
 }
 
+// Live Updates & Discovered Content Engine
+let liveUpdatesState = {
+  lastChecked: "Just now",
+  blogPosts: [
+    {
+      title: "Stock Prices, Earnings and Cashflows: The AI Effect plays through!",
+      date: "2026-10-08",
+      url: "https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html",
+      summary: "In a post at the end of August 2026, I talked about interest rates in 2026 and marveled at the capacity of equities to keep rising in the face of rising rates..."
+    },
+    {
+      title: "Interest Rates and Stock Prices: An Old Debate Flares up!",
+      date: "2026-09-10",
+      url: "https://aswathdamodaran.blogspot.com/2026/09/interest-rates-and-stock-prices-old.html",
+      summary: "The war in Iran, oil prices and worries about a recession have all taken turns driving stock prices in 2026 but talk about interest rates and where they are going remains front and center..."
+    },
+    {
+      title: "The Scaling and Profitability Trade off: Venture Capital's Weakest Link!",
+      date: "2026-09-02",
+      url: "https://aswathdamodaran.blogspot.com/2026/09/the-scaling-and-profitability-trade-off.html",
+      summary: "It is undeniable technology companies have found their most hospitable setting in the United States and while there are many reasons for the US dominance, VC scaling is critical..."
+    },
+    {
+      title: "AI's Bar Mitzvah Moment: From Hype & Hope to Business Questions!",
+      date: "2026-08-20",
+      url: "https://aswathdamodaran.blogspot.com/2026/08/ais-bar-mitzvah-moment-from-hype-hope.html",
+      summary: "I wrote and posted this piece with the promise that I would listen to feedback and try to respond. AI is transitioning from early excitement to fundamental business questions..."
+    },
+    {
+      title: "The Situational Awareness Blow-up: The Collateral Damage from Investing Conviction!",
+      date: "2026-08-10",
+      url: "https://aswathdamodaran.blogspot.com/2026/08/the-situational-awareness-blow-up.html",
+      summary: "When market conditions shift rapidly, high conviction investing can turn into severe collateral damage without macro situational awareness..."
+    }
+  ],
+  additionalMaterials: [
+    { title: "Valuation Sensitivity & Scenario Model", url: "https://pages.stern.nyu.edu/~adamodar/pc/sensit.xls", type: "Excel Model", source: "Tools Portal", category: "Tools" },
+    { title: "R&D Asset Converter (US & Global)", url: "https://pages.stern.nyu.edu/~adamodar/pc/R&Dconv.xls", type: "Excel Model", source: "Current Datasets", category: "Datasets" },
+    { title: "Operating Lease Converter (Capitalization Model)", url: "https://pages.stern.nyu.edu/~adamodar/pc/oplease.xls", type: "Excel Model", source: "Current Datasets", category: "Datasets" },
+    { title: "Synergy Valuation Spreadsheet", url: "https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls", type: "Excel Model", source: "Tools Portal", category: "Tools" },
+    { title: "Brand Name Valuation Model", url: "https://pages.stern.nyu.edu/~adamodar/pc/brandnamevalue.xls", type: "Excel Model", source: "Tools Portal", category: "Tools" },
+    { title: "Corporate Control Premium Estimator", url: "https://pages.stern.nyu.edu/~adamodar/pc/controlvalue.xls", type: "Excel Model", source: "Tools Portal", category: "Tools" },
+    { title: "Distress Valuation & Probability Model", url: "https://pages.stern.nyu.edu/~adamodar/pc/distress.xls", type: "Excel Model", source: "Tools Portal", category: "Tools" },
+    { title: "Financial Services Excess Return Model", url: "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls", type: "Excel Model", source: "Tools Portal", category: "Tools" },
+    { title: "High Growth Multistage DCF Model", url: "https://pages.stern.nyu.edu/~adamodar/pc/higrowth.xls", type: "Excel Model", source: "Tools Portal", category: "Tools" },
+    { title: "Patent Valuation Real Option Model", url: "https://pages.stern.nyu.edu/~adamodar/pc/patent.xls", type: "Excel Model", source: "Tools Portal", category: "Tools" }
+  ]
+};
+
+function renderUpdatesSubtab(subtabKey) {
+  const container = document.getElementById('updates-subtab-container');
+  if (!container) return;
+
+  const timeEl = document.getElementById('sync-last-check-time');
+  if (timeEl) timeEl.textContent = liveUpdatesState.lastChecked;
+
+  if (subtabKey === 'live-blog') {
+    const cardsHtml = liveUpdatesState.blogPosts.map(p => `
+      <div class="cp-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span class="tool-badge" style="background:#2563eb; color:#ffffff;">BLOG POST</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">${p.date}</span>
+        </div>
+        <strong style="font-size:1rem; line-height:1.35; margin-bottom:8px; display:block;">${p.title}</strong>
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:14px; line-height:1.4;">${p.summary}</p>
+        <a href="${p.url}" target="_blank" class="pill-btn" style="width:fit-content; margin-top:auto;">READ ARTICLE ↗</a>
+      </div>
+    `).join('');
+
+    container.innerHTML = `
+      <div class="phase-card" style="padding: 24px;">
+        <div style="margin-bottom:16px;">
+          <h3 style="font-size:1.1rem; margin-bottom:4px;">Prof. Damodaran's Latest Thoughts & Analysis</h3>
+          <p style="font-size:0.85rem; color:var(--text-secondary);">Direct live stream from <em>Musings on Markets</em>. Click any post to read the full breakdown.</p>
+        </div>
+        <div class="checkpoints-grid">${cardsHtml}</div>
+      </div>
+    `;
+  } else if (subtabKey === 'additional-content') {
+    const cardsHtml = liveUpdatesState.additionalMaterials.map(item => `
+      <div class="cp-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span class="tool-badge">${item.type}</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">${item.source}</span>
+        </div>
+        <strong style="font-size:0.95rem; margin-bottom:8px; display:block;">${item.title}</strong>
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:14px;">Discovered external resource on Damodaran Online. Unmapped to standard 7-step core.</p>
+        <a href="${item.url}" target="_blank" class="pill-btn" style="width:fit-content; margin-top:auto;">DOWNLOAD / OPEN RESOURCE ↗</a>
+      </div>
+    `).join('');
+
+    container.innerHTML = `
+      <div class="phase-card" style="padding: 24px;">
+        <div style="margin-bottom:16px;">
+          <h3 style="font-size:1.1rem; margin-bottom:4px;">Newly Discovered & Additional Materials</h3>
+          <p style="font-size:0.85rem; color:var(--text-secondary);">These resources were automatically detected by the sync engine on <code>pages.stern.nyu.edu</code> and are made available here so nothing is ever missed.</p>
+        </div>
+        <div class="checkpoints-grid">${cardsHtml}</div>
+      </div>
+    `;
+  } else if (subtabKey === 'dataset-logs') {
+    container.innerHTML = `
+      <div class="phase-card" style="padding: 24px;">
+        <h3 style="font-size:1.15rem; margin-bottom:12px;">Damodaran Datasets Release Schedule & Logs</h3>
+        <div class="checkpoints-grid">
+          <div class="cp-card">
+            <span class="tool-badge" style="background:#10b981; color:#ffffff;">CURRENT LIVE</span>
+            <strong style="font-size:1rem; margin-top:8px; display:block;">January 9, 2026 Datasets</strong>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:6px;">Annual update covering 48,000+ global companies across 90+ industries. All betas, cost of capital, ERP, and multiples are current for 2026.</p>
+            <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html" target="_blank" class="pill-btn" style="margin-top:auto;">VIEW 2026 PORTAL ↗</a>
+          </div>
+          <div class="cp-card">
+            <span class="tool-badge" style="background:#6366f1; color:#ffffff;">SCHEDULED NEXT</span>
+            <strong style="font-size:1rem; margin-top:8px; display:block;">January 2027 Datasets</strong>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:6px;">Next annual release scheduled for the first two weeks of January 2027. The automated sync pipeline will detect the new files upon upload.</p>
+            <span class="ext-tag" style="margin-top:auto;">AUTO-SYNC MONITORED</span>
+          </div>
+        </div>
+      </div>
+    `;
+  } else if (subtabKey === 'sync-engine') {
+    container.innerHTML = `
+      <div class="phase-card" style="padding: 24px;">
+        <h3 style="font-size:1.15rem; margin-bottom:8px;">Automated Sync Pipeline Configuration</h3>
+        <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:16px;">This repository includes automated synchronization tools that continuously crawl Damodaran Online:</p>
+        <ul style="list-style:none; margin-bottom:16px;">
+          <li style="font-size:0.85rem; margin-bottom:8px; color:var(--text-secondary);">• <strong>Node.js Local Runner</strong>: <code>node sync_damodaran.js</code> (runs in 5 seconds, pulls new blog posts and detects new spreadsheets).</li>
+          <li style="font-size:0.85rem; margin-bottom:8px; color:var(--text-secondary);">• <strong>GitHub Actions Workflow</strong>: <code>.github/workflows/sync.yml</code> runs automatically every Monday at 00:00 UTC and auto-commits updates.</li>
+          <li style="font-size:0.85rem; margin-bottom:8px; color:var(--text-secondary);">• <strong>In-Browser Live Feed</strong>: Clicking "CHECK UPDATES" in the header queries Damodaran's live blog feed on demand.</li>
+        </ul>
+        <a href="https://github.com" target="_blank" class="pill-btn" style="width:fit-content;">OPEN GITHUB WORKFLOW ↗</a>
+      </div>
+    `;
+  }
+}
+
+async function triggerLiveCheck() {
+  const syncBtn = document.getElementById('btn-force-sync');
+  const manualBtn = document.getElementById('btn-manual-sync-now');
+  if (syncBtn) syncBtn.innerHTML = '<span>⏳ CHECKING LIVE...</span>';
+  if (manualBtn) manualBtn.textContent = '⏳ CHECKING LIVE...';
+
+  try {
+    const res = await fetch('https://aswathdamodaran.blogspot.com/feeds/posts/default?alt=json');
+    if (res.ok) {
+      const data = await res.json();
+      const entries = data.feed?.entry || [];
+      if (entries.length > 0) {
+        liveUpdatesState.blogPosts = entries.slice(0, 10).map(e => {
+          const title = e.title?.$t || 'Untitled Post';
+          const date = (e.published?.$t || '').substring(0, 10);
+          const raw = (e.summary?.$t || e.content?.$t || '').replace(/<[^>]+>/g, ' ').replace(/\\s+/g, ' ').trim();
+          const summary = raw.length > 180 ? raw.substring(0, 180) + '...' : raw;
+          const url = (e.link || []).find(l => l.rel === 'alternate')?.href || 'https://aswathdamodaran.blogspot.com';
+          return { title, date, url, summary };
+        });
+      }
+    }
+  } catch (e) {
+    console.log('Live fetch note:', e.message);
+  }
+
+  const now = new Date();
+  liveUpdatesState.lastChecked = `${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
+
+  if (syncBtn) syncBtn.innerHTML = '<span>🔄 CHECK UPDATES</span>';
+  if (manualBtn) manualBtn.textContent = '🔄 RUN LIVE CHECK NOW';
+
+  renderUpdatesSubtab('live-blog');
+}
+
 // Render Phase Sessions
 function renderPhaseSessions(phaseId, containerId) {
   const container = document.getElementById(containerId);
@@ -870,9 +1043,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (hub === 'writing') renderWritingSubtab(subtab);
         if (hub === 'tools') renderToolsSubtab(subtab);
         if (hub === 'data') renderDataSubtab(subtab);
+        if (hub === 'updates') renderUpdatesSubtab(subtab);
       });
     });
   });
+
+  // Force Sync & Live Check Button Handlers
+  const syncHeaderBtn = document.getElementById('btn-force-sync');
+  if (syncHeaderBtn) {
+    syncHeaderBtn.addEventListener('click', () => {
+      switchView('updates');
+      triggerLiveCheck();
+    });
+  }
+
+  const manualSyncBtn = document.getElementById('btn-manual-sync-now');
+  if (manualSyncBtn) {
+    manualSyncBtn.addEventListener('click', () => {
+      triggerLiveCheck();
+    });
+  }
 
   // Hash Navigation Handler
   function handleHashChange() {
@@ -898,6 +1088,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentView === 'books-papers') renderWritingSubtab('books');
     if (currentView === 'tools') renderToolsSubtab('corpfin-tools');
     if (currentView === 'reference') renderDataSubtab('about-data');
+    if (currentView === 'updates') renderUpdatesSubtab('live-blog');
   }
 
   if (searchInput) {

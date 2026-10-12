@@ -978,6 +978,33 @@ img, video, iframe, embed, object {
   margin-bottom: 8px;
 }
 
+/* Sync Banner Card */
+.sync-banner-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.sync-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sync-meta-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
 /* Interactive Sub-Tabs Bar */
 .sub-tabs-bar {
   display: flex;

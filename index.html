@@ -116,6 +116,13 @@
           <span class="nav-icon">DATA</span>
           <span class="nav-text">Datasets & Benchmarks</span>
         </button>
+
+        <div class="nav-section-title">LIVE SYNC & DISCOVERIES</div>
+        <button class="nav-item" data-view="updates">
+          <span class="nav-icon">NEW</span>
+          <span class="nav-text">Latest Updates & Add-ons</span>
+          <span class="nav-badge" style="background: #2563eb; color: #fff;">LIVE</span>
+        </button>
       </nav>
 
       <div class="sidebar-footer">
@@ -939,6 +946,39 @@
             <div id="data-subfilters-wrapper" style="margin-bottom: 16px;"></div>
 
             <div id="data-subtab-container" class="timeline-container">
+              <!-- Rendered dynamically by script.js -->
+            </div>
+          </div>
+
+          <!-- VIEW: LATEST UPDATES & ADDITIONAL CONTENT -->
+          <div id="view-updates" class="app-view">
+            <div class="page-title-banner">
+              <span class="phase-tag">LIVE SYNC & DISCOVERIES</span>
+              <h1 class="page-main-title">Latest Updates & Additional Content</h1>
+              <p class="page-sub-title">Live feed of new posts from Prof. Damodaran's <em>Musings on Markets</em>, newly discovered external resources, unmapped spreadsheets, and automatic sync logs.</p>
+            </div>
+
+            <div class="sync-banner-card">
+              <div class="sync-banner-left">
+                <span class="pulse-dot"></span>
+                <div>
+                  <strong>Damodaran Online Monitor: <span style="color:#10b981;">ACTIVE</span></strong>
+                  <div class="sync-meta-text">Last Checked: <span id="sync-last-check-time">Loading sync state...</span> • Monitored Endpoints: 6 Portals</div>
+                </div>
+              </div>
+              <button id="btn-manual-sync-now" class="pill-btn" style="background:var(--accent-inverted-bg); color:var(--accent-inverted-text); font-weight:700;">
+                🔄 RUN LIVE CHECK NOW
+              </button>
+            </div>
+
+            <div class="sub-tabs-bar" data-hub="updates">
+              <button class="sub-tab-btn active" data-subtab="live-blog">📰 Musings on Markets (Live Feed)</button>
+              <button class="sub-tab-btn" data-subtab="additional-content">🆕 Newly Discovered & Unmapped Materials</button>
+              <button class="sub-tab-btn" data-subtab="dataset-logs">📊 Annual Dataset Update Logs</button>
+              <button class="sub-tab-btn" data-subtab="sync-engine">⚙️ Automated Sync Pipeline Setup</button>
+            </div>
+
+            <div id="updates-subtab-container" class="timeline-container">
               <!-- Rendered dynamically by script.js -->
             </div>
           </div>

@@ -1,0 +1,32 @@
+name: Damodaran Online Automated Sync
+
+on:
+  schedule:
+    # Run every Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Damodaran Sync Engine
+        run: node sync_damodaran.js
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --global user.name "Damodaran Sync Bot"
+          git config --global user.email "bot@damodaransync.local"
+          git add updates_feed.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(sync): update Damodaran Online live feeds & discovered materials [skip ci]" && git push)
