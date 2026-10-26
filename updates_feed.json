@@ -1,7 +1,7 @@
 {
   "sync_metadata": {
-    "last_synced": "2026-10-19T03:41:33.172Z",
-    "last_synced_human": "Mon, 19 Oct 2026 03:41:33 GMT",
+    "last_synced": "2026-10-26T03:42:13.701Z",
+    "last_synced_human": "Mon, 26 Oct 2026 03:42:13 GMT",
     "engine_version": "2.0.0 (Node.js)",
     "status": "operational",
     "monitored_endpoints": 6,
@@ -9,6 +9,12 @@
     "total_additional_items": 246
   },
   "recent_blog_posts": [
+    {
+      "title": "From Eyeballs to Annual Run Rates (ARR): Buzzy Pricing Metrics and the Anthropic Trade!",
+      "date": "2026-10-22",
+      "url": "https://aswathdamodaran.blogspot.com/2026/10/from-eyeballs-to-annual-run-rates-arr.html",
+      "summary": "&nbsp; &nbsp; I was in San Francisco last week to talk to NYU Stern Alumni on October 15, and it was the day that Anthropic had a pre-IPO meeting with prospective investors. While ..."
+    },
     {
       "title": "Stock Prices, Earnings and Cashflows: The AI Effect plays through!",
       "date": "2026-10-08",
@@ -92,12 +98,6 @@
       "date": "2026-03-15",
       "url": "https://aswathdamodaran.blogspot.com/2026/03/the-price-of-risk-equity-risk-premium.html",
       "summary": "&nbsp; &nbsp;I start my valuation classes with a question of whether valuation is an art or a science, and I argue that it is neither; it does not have the precision that character..."
-    },
-    {
-      "title": "AI Scenarios: From Doomsday Destruction to Do-Nothing Bots!",
-      "date": "2026-03-04",
-      "url": "https://aswathdamodaran.blogspot.com/2026/03/ai-scenarios-from-economic-doomsday-to.html",
-      "summary": "&nbsp; &nbsp; &nbsp; When Chat GPT made its debut on November 30, 2022, it unleashed the hype of AI, and in the three years since, AI has taken on an outsized role not just in mark..."
     }
   ],
   "additional_materials": [
