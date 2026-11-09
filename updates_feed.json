@@ -1,7 +1,7 @@
 {
   "sync_metadata": {
-    "last_synced": "2026-11-02T04:54:06.999Z",
-    "last_synced_human": "Mon, 02 Nov 2026 04:54:06 GMT",
+    "last_synced": "2026-11-09T05:05:12.489Z",
+    "last_synced_human": "Mon, 09 Nov 2026 05:05:12 GMT",
     "engine_version": "2.0.0 (Node.js)",
     "status": "operational",
     "monitored_endpoints": 6,
@@ -9,6 +9,12 @@
     "total_additional_items": 246
   },
   "recent_blog_posts": [
+    {
+      "title": "The Anthropic Feedback Loop: The Cost of Capital Delusion and Diversion!",
+      "date": "2026-11-03",
+      "url": "https://aswathdamodaran.blogspot.com/2026/11/the-anthropic-feedback-loop-cost-of.html",
+      "summary": "I knew that my post on Anthropic would draw strong reactions, when I made it public last week. I did mention in the course of the post that I have no interest in selling my estimat..."
+    },
     {
       "title": "The Anthropic Prospectus Arrives: My (but not the) IPO valuation!",
       "date": "2026-10-28",
@@ -92,12 +98,6 @@
       "date": "2026-04-01",
       "url": "https://aswathdamodaran.blogspot.com/2026/04/oil-war-and-global-economy-markets.html",
       "summary": "&nbsp; &nbsp; Markets play an expectations game, and in March 2026, we saw the process play out, with all of its upsides and downsides. The month started with a war in the Middle E..."
-    },
-    {
-      "title": "Finding your investing lodestar: In Search of an Investment Philosophy",
-      "date": "2026-03-24",
-      "url": "https://aswathdamodaran.blogspot.com/2026/03/finding-your-investing-lodestar-in.html",
-      "summary": "&nbsp; &nbsp; When uncertainty roils markets, as is the case right now, it is natural for investors to get knocked off balance, a when off-balance, to make investment decisions tha..."
     }
   ],
   "additional_materials": [
