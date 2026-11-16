@@ -1,7 +1,7 @@
 {
   "sync_metadata": {
-    "last_synced": "2026-11-09T05:05:12.489Z",
-    "last_synced_human": "Mon, 09 Nov 2026 05:05:12 GMT",
+    "last_synced": "2026-11-16T05:17:58.221Z",
+    "last_synced_human": "Mon, 16 Nov 2026 05:17:58 GMT",
     "engine_version": "2.0.0 (Node.js)",
     "status": "operational",
     "monitored_endpoints": 6,
@@ -9,6 +9,12 @@
     "total_additional_items": 246
   },
   "recent_blog_posts": [
+    {
+      "title": "The AI Trade Deconstructed: AI Builders, AI Suppliers and AI Product firms!",
+      "date": "2026-11-09",
+      "url": "https://aswathdamodaran.blogspot.com/2026/11/the-ai-trade-deconstructed-ai-builders.html",
+      "summary": "&nbsp; &nbsp; When I posted my valuation of Anthropic a few days ago, I noted that turbulence lay ahead, both for the company and the market. I did not expect that turbulence to be..."
+    },
     {
       "title": "The Anthropic Feedback Loop: The Cost of Capital Delusion and Diversion!",
       "date": "2026-11-03",
@@ -92,12 +98,6 @@
       "date": "2026-04-23",
       "url": "https://aswathdamodaran.blogspot.com/2026/04/to-trillion-dollars-and-beyond-spacex.html",
       "summary": "&nbsp; &nbsp; In 2001, A Space Odyssey , a movie that was well ahead of its time when it was released in 1968, Hal (the computer) famously responded to questions about his reliabil..."
-    },
-    {
-      "title": "Oil, War and the Global Economy: The Market's Narrative in March 2026",
-      "date": "2026-04-01",
-      "url": "https://aswathdamodaran.blogspot.com/2026/04/oil-war-and-global-economy-markets.html",
-      "summary": "&nbsp; &nbsp; Markets play an expectations game, and in March 2026, we saw the process play out, with all of its upsides and downsides. The month started with a war in the Middle E..."
     }
   ],
   "additional_materials": [
