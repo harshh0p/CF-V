@@ -1,7 +1,7 @@
 {
   "sync_metadata": {
-    "last_synced": "2026-11-16T05:17:58.221Z",
-    "last_synced_human": "Mon, 16 Nov 2026 05:17:58 GMT",
+    "last_synced": "2026-11-23T06:17:04.331Z",
+    "last_synced_human": "Mon, 23 Nov 2026 06:17:04 GMT",
     "engine_version": "2.0.0 (Node.js)",
     "status": "operational",
     "monitored_endpoints": 6,
@@ -9,6 +9,18 @@
     "total_additional_items": 246
   },
   "recent_blog_posts": [
+    {
+      "title": "The Cost of Human Frailty: Nvidia's Jensen Huang Test!",
+      "date": "2026-11-19",
+      "url": "https://aswathdamodaran.blogspot.com/2026/11/the-cost-of-human-frailty-nvidias.html",
+      "summary": "In a month full of big stories, perhaps the biggest business story was the fall from grace of Jensen Huang and the consequences for Nvidia, investors, and the rest of the AI trade...."
+    },
+    {
+      "title": "The Rocky Road from Aggregate to Per Share Value: Anthropic's IPO update",
+      "date": "2026-11-18",
+      "url": "https://aswathdamodaran.blogspot.com/2026/11/the-rocky-road-from-aggregate-to-per.html",
+      "summary": "&nbsp; &nbsp; &nbsp; I valued Anthropic in a post on November 2, 2026, and while estimating a value of $1.475 trillion for the equity in the company, I noted that the share count w..."
+    },
     {
       "title": "The AI Trade Deconstructed: AI Builders, AI Suppliers and AI Product firms!",
       "date": "2026-11-09",
@@ -86,18 +98,6 @@
       "date": "2026-06-04",
       "url": "https://aswathdamodaran.blogspot.com/2026/06/a-weeks-ago-i-assessed-value-of-spacex.html",
       "summary": "&nbsp; &nbsp; &nbsp; A &nbsp;few weeks ago, I assessed the value of SpaceX ahead of its initial public offering , with the admission that I was making my estimates with drabs of da..."
-    },
-    {
-      "title": "An Ode to Restraint: Lessons from the Tim Cook Legacy",
-      "date": "2026-05-06",
-      "url": "https://aswathdamodaran.blogspot.com/2026/05/an-ode-to-restraint-lessons-from-tim.html",
-      "summary": "&nbsp; &nbsp; &nbsp;Through time, we have glorified conquerors and empire builders in politics, civic life and business, from Alexander the Great and Genghis Khan to the tech titan..."
-    },
-    {
-      "title": "To a Trillion(s) Dollars and beyond: A SpaceX IPO Odyssey!",
-      "date": "2026-04-23",
-      "url": "https://aswathdamodaran.blogspot.com/2026/04/to-trillion-dollars-and-beyond-spacex.html",
-      "summary": "&nbsp; &nbsp; In 2001, A Space Odyssey , a movie that was well ahead of its time when it was released in 1968, Hal (the computer) famously responded to questions about his reliabil..."
     }
   ],
   "additional_materials": [
